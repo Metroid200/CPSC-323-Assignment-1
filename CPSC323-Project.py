@@ -54,7 +54,7 @@ lexer.add_state("Real", state_real)
 
 ######### end of FSM build attempt #############
 program = a.split("\n")
-print("token ---------- lexems\n")
+print("lexems ---------- token\n")
 for line in program:
     tokens=line.split(' ')
     for token in tokens:
