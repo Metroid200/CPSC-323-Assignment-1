@@ -16,8 +16,8 @@ integer = ["0", "1", "2", "3", "4", "5","6", "7", "8", "9"]
 punctuation_symbol = { ':' : 'colon', ';' : 'semi-colon', '.' : 'dot' , ',' : 'comma' }
 punctuation_symbol_key = punctuation_symbol.keys()
 
-seperator = { '(' : 'seperator', ')' : 'seperator',' ':'space' }
-seperater_key = seperator.keys()
+separator = { '(' : 'separator', ')' : 'separator',' ':'space' }
+separator_key = separator.keys()
 
 dataFlag = False
 
@@ -64,8 +64,8 @@ for line in program:
             print(token ,"---------- keyword")
         elif token in punctuation_symbol_key:
             print (token ,"----------", punctuation_symbol[token])
-        elif token in seperater_key:
-            print (token ,"----------", seperator[token])
+        elif token in separator_key:
+            print (token ,"----------", separator[token])
         else:
             try:
                 variable = int(token)
