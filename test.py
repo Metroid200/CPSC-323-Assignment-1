@@ -4,7 +4,7 @@ def lexer(num):
 
 def int_real_FSM(num):
     states = {
-        'start': [('123456789', 'integer'), ('0', 'zero')],
+        'start': [('0123456789', 'integer')],
         'integer': [('0123456789', 'integer'), ('.', 'dot')],
         'zero': [('.', 'dot')],
         'dot': [('0123456789', 'real')],
@@ -25,8 +25,6 @@ def int_real_FSM(num):
                 state = 'error'
                 break
         else:
-            if state == 'zero':
-                state = 'integer'
             if state != 'integer' and state != 'real':
                 state = 'error'
             break
