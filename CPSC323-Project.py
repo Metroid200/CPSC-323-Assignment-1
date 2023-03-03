@@ -1,8 +1,9 @@
-
-file = open("read.py")
+fname = input('Enter the file name: ')
+file = open(fname)
 
 operators = {'=' : 'operator','+' : 'operator','-' : 'operator','/' : 'operator','==' : 'operator','%' : 'operator'
-,'*' : 'operator','<' : 'operator','>' : 'operator', '<=' : 'operator', '>=' : 'operator' }
+,'*' : 'operator','<' : 'operator','>' : 'operator', '<=' : 'operator', '>=' : 'operator', '+=' : 'operator',
+'-=': 'operator'}
 operators_key = operators.keys()
 
 keyword = ['for','while','False','await','else','if','import','pass','None','break','except','in','raise','True'
