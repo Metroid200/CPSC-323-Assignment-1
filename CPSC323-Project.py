@@ -9,7 +9,7 @@ operators_key = operators.keys()
 
 keyword = ['for','while','False','await','else','if','import','pass','None','break','except','in','raise','True'
 ,'class','finally','is','return','and','continue','lambda','try','as','def','from','nonlocal','assert','del'
-,'global','not','with','async','elif','or','yield','whileend','forend','ifend','range','print']
+,'global','not','with','async','elif','or','yield','endwhile','forend','ifend','range','print']
 
 integer = ["0", "1", "2", "3", "4", "5","6", "7", "8", "9"]
 
