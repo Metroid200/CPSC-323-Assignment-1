@@ -101,7 +101,7 @@ if __name__ == '__main__':
     sys.stdout = open(oname, "w")
     a=file.read()
     program = a.split("\n")
-    print("lexems ---------- token\n")
+    print("lexeme ---------- token\n")
     for line in program:
         tokens = line.split(' ')
         for token in tokens:
