@@ -1,4 +1,4 @@
-lexems ---------- token
+lexeme ---------- token
 
 while ---------- keyword
 ( ---------- separator
@@ -11,8 +11,3 @@ a ---------- identifier
 23.00 ---------- real
 ; ---------- separator
 endwhile ---------- keyword
-[* ---------- invalid
-this ---------- identifier
-is ---------- keyword
-sample ---------- identifier
-*] ---------- invalid

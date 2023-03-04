@@ -1,20 +1,30 @@
 import sys
 
 
-operators = {'=' : 'operator','+' : 'operator','-' : 'operator','/' : 'operator','==' : 'operator','%' : 'operator'
-,'*' : 'operator','<' : 'operator','>' : 'operator', '<=' : 'operator', '>=' : 'operator', '+=' : 'operator',
-'-=': 'operator'}
+operators = {'=': 'operator', '+': 'operator', '-': 'operator', '/': 'operator', '==': 'operator',
+             '*': 'operator', '<': 'operator', '>': 'operator', '<=': 'operator', '=>': 'operator',
+             '>=': 'operator', '!=': 'operator'}
 operators_key = operators.keys()
 
-keyword = ['for','while','False','await','else','if','import','pass','None','break','except','in','raise','True'
-,'class','finally','is','return','and','continue','lambda','try','as','def','from','nonlocal','assert','del'
-,'global','not','with','async','elif','or','yield','endwhile','forend','ifend','range','print']
+keyword = ['function', 'int', 'bool', 'real', 'if', 'fi', 'else', 'return', 'put', 'get', 'while', 'endwhile',
+           'true', 'false']
 
-punctuation_symbol = { ':' : 'separator', ';' : 'separator', '.' : 'separator' , ',' : 'separator' }
-punctuation_symbol_key = punctuation_symbol.keys()
-
-separator = { '(' : 'separator', ')' : 'separator',' ':'space' }
+separator = {'(' : 'separator', ')' : 'separator', '#': 'separator', ':' : 'separator', ';' : 'separator',
+             '.' : 'separator' , ',' : 'separator', '{' : 'separator', '}' : 'separator', '|': 'separator'}
 separator_key = separator.keys()
+
+
+def ignore_comment(str):
+    result = ''
+    skip = 0
+    for i in range(len(str)):
+        if str[i] == '[' and str[i + 1] == '*':
+            skip += 1
+        elif str[i - 1] == '*' and str[i] == ']':
+            skip -= 1
+        elif skip == 0:
+            result += str[i]
+    return result
 
 
 def id_FSM(id):
@@ -81,8 +91,6 @@ def lexer(token):
         print(token ,"----------", operators[token])
     elif token in keyword:
         print(token ,"---------- keyword")
-    elif token in punctuation_symbol_key:
-        print(token ,"----------", punctuation_symbol[token])
     elif token in separator_key:
         print(token ,"----------", separator[token])
     else:
@@ -100,6 +108,7 @@ if __name__ == '__main__':
     oname = input('Enter the output file name: ')
     sys.stdout = open(oname, "w")
     a=file.read()
+    a=ignore_comment(a)
     program = a.split("\n")
     print("lexeme ---------- token\n")
     for line in program:
