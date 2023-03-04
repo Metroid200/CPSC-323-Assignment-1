@@ -1,147 +1,73 @@
 Input:
-Enter the file name: test3.txt
+Enter the file name: test2.txt
 
-def binary_search(arr, left, right, x):
-    if right >= left:
-        mid = left + (right - left) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] > x:
-            return binary_search(arr, left, mid - 1, x)
-        else:
-            return binary_search(arr, mid + 1, right, x)
-    else:
-        return -1
-arr = [3, 4, 5, 10, 40]
-x = 10
-result = binary_search(arr, 0, len(arr) - 1, x)
-if result != -1:
-    print("Element is present at index", str(result))
+for i in range(1, 6):
+if i == 3:
+print('Found it!')
+continue
+print(i)
+
+def factorial(n):
+if n == 0:
+return 1
 else:
-    print("Element is not present in array")
+return n * factorial(n-1)
+
+print(factorial(5))
 
 lexems ---------- token
-
-def ---------- keyword
-binary_search ---------- identifier
+for ---------- keyword
+i ---------- identifier
+in ---------- keyword
+range ---------- keyword
 ( ---------- separator
-arr ---------- identifier
+1 ---------- real
 , ---------- comma
-left ---------- identifier
-, ---------- comma
-right ---------- identifier
-, ---------- comma
-x ---------- identifier
+6 ---------- real
 ) ---------- separator
 : ---------- colon
 if ---------- keyword
-right ---------- identifier
->= ---------- operator
-left ---------- identifier
-: ---------- colon
-mid ---------- identifier
-= ---------- operator
-left ---------- identifier
-+ ---------- operator
-( ---------- separator
-right ---------- identifier
-- ---------- operator
-left ---------- identifier
-) ---------- separator
-// ---------- operator
-2 ---------- real
-if ---------- keyword
-arr ---------- identifier
-[ ---------- separator
-mid ---------- identifier
-] ---------- separator
+i ---------- identifier
 == ---------- operator
-x ---------- identifier
-: ---------- colon
-return ---------- identifier
-mid ---------- identifier
-elif ---------- keyword
-arr ---------- identifier
-[ ---------- separator
-mid ---------- identifier
-] ---------- separator
-> ---------- operator
-x ---------- identifier
-: ---------- colon
-return ---------- identifier
-binary_search ---------- identifier
-( ---------- separator
-arr ---------- identifier
-, ---------- comma
-left ---------- identifier
-, ---------- comma
-mid ---------- identifier
-- ---------- operator
-1 ---------- real
-, ---------- comma
-x ---------- identifier
-) ---------- separator
-else ---------- keyword
-: ---------- colon
-return ---------- identifier
-binary_search ---------- identifier
-( ---------- separator
-arr ---------- identifier
-, ---------- comma
-mid ---------- identifier
-+ ---------- operator
-1 ---------- real
-, ---------- comma
-right ---------- identifier
-, ---------- comma
-x ---------- identifier
-) ---------- separator
-else ---------- keyword
-: ---------- colon
-return ---------- identifier
-- ---------- operator
-1 ---------- real
-arr ---------- identifier
-= ---------- operator
-[ ---------- separator
 3 ---------- real
-, ---------- comma
-4 ---------- real
-, ---------- comma
-5 ---------- real
-, ---------- comma
-10 ---------- real
-, ---------- comma
-40 ---------- real
-] ---------- separator
-x ---------- identifier
-= ---------- operator
-10 ---------- real
-result ---------- identifier
-= ---------- operator
-binary_search ---------- identifier
-( ---------- separator
-arr ---------- identifier
-, ---------- comma
-0 ---------- real
-, ---------- comma
-len ---------- identifier
-( ---------- separator
-arr ---------- identifier
-) ---------- separator
-- ---------- operator
-1 ---------- real
-, ---------- comma
-x ---------- identifier
-) ---------- separator
-if ---------- keyword
-result ---------- identifier
-!= ---------- operator
-- ---------- operator
-1 ---------- real
 : ---------- colon
-print ---------- identifier
+print ---------- keyword
 ( ---------- separator
-"Element is present at index" ---------- identifier
-, ---------- comma
-str ----------
+'Found it!' ---------- identifier
+) ---------- separator
+continue ---------- keyword
+print ---------- keyword
+( ---------- separator
+i ---------- identifier
+) ---------- separator
+def ---------- keyword
+factorial ---------- identifier
+( ---------- separator
+n ---------- identifier
+) ---------- separator
+: ---------- colon
+if ---------- keyword
+n ---------- identifier
+== ---------- operator
+0 ---------- real
+: ---------- colon
+return ---------- keyword
+1 ---------- real
+else ---------- keyword
+: ---------- colon
+return ---------- keyword
+n ---------- identifier
+* ---------- operator
+factorial ---------- identifier
+( ---------- separator
+n ---------- identifier
+- ---------- operator
+1 ---------- real
+) ---------- separator
+print ---------- keyword
+( ---------- separator
+factorial ---------- identifier
+( ---------- separator
+5 ---------- real
+) ---------- separator
+) ---------- separator
