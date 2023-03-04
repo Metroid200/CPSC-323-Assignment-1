@@ -1,0 +1,145 @@
+Enter the file name: test3.py
+def binary_search(arr, left, right, x):
+    if right >= left:
+        mid = left + (right - left) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, left, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, right, x)
+    else:
+        return -1
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, 0, len(arr) - 1, x)
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
+
+lexems ---------- token
+
+def ---------- keyword
+binary_search ---------- identifier
+( ---------- separator
+arr ---------- identifier
+, ---------- comma
+left ---------- identifier
+, ---------- comma
+right ---------- identifier
+, ---------- comma
+x ---------- identifier
+) ---------- separator
+: ---------- colon
+if ---------- keyword
+right ---------- identifier
+>= ---------- operator
+left ---------- identifier
+: ---------- colon
+mid ---------- identifier
+= ---------- operator
+left ---------- identifier
++ ---------- operator
+( ---------- separator
+right ---------- identifier
+- ---------- operator
+left ---------- identifier
+) ---------- separator
+// ---------- operator
+2 ---------- real
+if ---------- keyword
+arr ---------- identifier
+[ ---------- separator
+mid ---------- identifier
+] ---------- separator
+== ---------- operator
+x ---------- identifier
+: ---------- colon
+return ---------- identifier
+mid ---------- identifier
+elif ---------- keyword
+arr ---------- identifier
+[ ---------- separator
+mid ---------- identifier
+] ---------- separator
+> ---------- operator
+x ---------- identifier
+: ---------- colon
+return ---------- identifier
+binary_search ---------- identifier
+( ---------- separator
+arr ---------- identifier
+, ---------- comma
+left ---------- identifier
+, ---------- comma
+mid ---------- identifier
+- ---------- operator
+1 ---------- real
+, ---------- comma
+x ---------- identifier
+) ---------- separator
+else ---------- keyword
+: ---------- colon
+return ---------- identifier
+binary_search ---------- identifier
+( ---------- separator
+arr ---------- identifier
+, ---------- comma
+mid ---------- identifier
++ ---------- operator
+1 ---------- real
+, ---------- comma
+right ---------- identifier
+, ---------- comma
+x ---------- identifier
+) ---------- separator
+else ---------- keyword
+: ---------- colon
+return ---------- identifier
+- ---------- operator
+1 ---------- real
+arr ---------- identifier
+= ---------- operator
+[ ---------- separator
+2 ---------- real
+, ---------- comma
+3 ---------- real
+, ---------- comma
+4 ---------- real
+, ---------- comma
+10 ---------- real
+, ---------- comma
+40 ---------- real
+] ---------- separator
+x ---------- identifier
+= ---------- operator
+10 ---------- real
+result ---------- identifier
+= ---------- operator
+binary_search ---------- identifier
+( ---------- separator
+arr ---------- identifier
+, ---------- comma
+0 ---------- real
+, ---------- comma
+len ---------- identifier
+( ---------- separator
+arr ---------- identifier
+) ---------- separator
+- ---------- operator
+1 ---------- real
+, ---------- comma
+x ---------- identifier
+) ---------- separator
+if ---------- keyword
+result ---------- identifier
+!= ---------- operator
+- ---------- operator
+1 ---------- real
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+"Element is present at index" ---------- identifier
+, ---------- comma
+str ----------
