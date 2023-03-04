@@ -1,0 +1,18 @@
+lexems ---------- token
+
+while ---------- keyword
+( ---------- separator
+fahr ---------- identifier
+<= ---------- operator
+upper ---------- identifier
+) ---------- separator
+a ---------- identifier
+= ---------- operator
+23.00 ---------- real
+; ---------- separator
+endwhile ---------- keyword
+[* ---------- invalid
+this ---------- identifier
+is ---------- keyword
+sample ---------- identifier
+*] ---------- invalid

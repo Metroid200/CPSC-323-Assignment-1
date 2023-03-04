@@ -1,4 +1,6 @@
 import sys
+
+
 operators = {'=' : 'operator','+' : 'operator','-' : 'operator','/' : 'operator','==' : 'operator','%' : 'operator'
 ,'*' : 'operator','<' : 'operator','>' : 'operator', '<=' : 'operator', '>=' : 'operator', '+=' : 'operator',
 '-=': 'operator'}
@@ -8,12 +10,12 @@ keyword = ['for','while','False','await','else','if','import','pass','None','bre
 ,'class','finally','is','return','and','continue','lambda','try','as','def','from','nonlocal','assert','del'
 ,'global','not','with','async','elif','or','yield','endwhile','forend','ifend','range','print']
 
-
 punctuation_symbol = { ':' : 'separator', ';' : 'separator', '.' : 'separator' , ',' : 'separator' }
 punctuation_symbol_key = punctuation_symbol.keys()
 
 separator = { '(' : 'separator', ')' : 'separator',' ':'space' }
 separator_key = separator.keys()
+
 
 def id_FSM(id):
     states = {
@@ -41,6 +43,7 @@ def id_FSM(id):
                 state = 'error'
             break
     return state
+
 
 def int_real_FSM(num):
     states = {
@@ -71,6 +74,26 @@ def int_real_FSM(num):
     return state
 
 
+def lexer(token):
+    if token == '':
+        return
+    if token in operators_key:
+        print(token ,"----------", operators[token])
+    elif token in keyword:
+        print(token ,"---------- keyword")
+    elif token in punctuation_symbol_key:
+        print(token ,"----------", punctuation_symbol[token])
+    elif token in separator_key:
+        print(token ,"----------", separator[token])
+    else:
+        if (id_FSM(token) != 'error'):
+            print(token, "---------- identifier")
+        elif (int_real_FSM(token) != 'error'):
+            print(token, "----------", int_real_FSM(token))
+        else:
+            print(token ,"---------- invalid")
+
+
 if __name__ == '__main__':
     fname = input('Enter the input file name: ')
     file = open(fname)
@@ -82,19 +105,5 @@ if __name__ == '__main__':
     for line in program:
         tokens = line.split(' ')
         for token in tokens:
-            if token in operators_key:
-                print(token ,"----------", operators[token])
-            elif token in keyword:
-                print(token ,"---------- keyword")
-            elif token in punctuation_symbol_key:
-                print (token ,"----------", punctuation_symbol[token])
-            elif token in separator_key:
-                print (token ,"----------", separator[token])
-            else:
-                if (id_FSM(token) != 'error'):
-                    print(token, "---------- identifier")
-                elif (int_real_FSM(token) != 'error'):
-                    print(token, "----------", int_real_FSM(token))
-                else:
-                    print (token ,"---------- invalid")
+            lexer(token)
     sys.stdout.close()
