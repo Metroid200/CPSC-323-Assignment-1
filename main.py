@@ -72,31 +72,15 @@ def int_real_FSM(num):
 
 
 if __name__ == '__main__':
-    fname = input('Enter the file name: ')
+    fname = input('Enter the input file name: ')
     file = open(fname)
-    oname = input('Enter output name: ')
+    oname = input('Enter the output file name: ')
     sys.stdout = open(oname, "w")
     a=file.read()
-    # comment = False
-    # start = 0
-    # stop = 0
-    # for i in range(len(a)):
-    #     if i == '[' and i+1 == '*':
-    #         comment = True
-    #         start = i
-    #    elif i == ']' and i-1 == '*':
-    #         stop = i
-    #         a = a[0: start:] + a[stop + 1::]
-    #         comment = False
     program = a.split("\n")
-    # print(program)
     print("lexems ---------- token\n")
     for line in program:
         tokens = line.split(' ')
-        # for token in tokens:
-        #     if token[0] == '(' and len(token) > 1:
-        #         tokens.insert(tokens.index(token), '(')
-        #         token = token[1:]
         for token in tokens:
             if token in operators_key:
                 print(token ,"----------", operators[token])
@@ -113,3 +97,4 @@ if __name__ == '__main__':
                     print(token, "----------", int_real_FSM(token))
                 else:
                     print (token ,"---------- invalid")
+    sys.stdout.close()

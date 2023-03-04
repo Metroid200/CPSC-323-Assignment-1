@@ -1,0 +1,16 @@
+lexems ---------- token
+
+while ---------- keyword
+(fahr ---------- invalid
+<= ---------- operator
+upper) ---------- invalid
+a ---------- identifier
+= ---------- operator
+23.00; ---------- invalid
+endwhile ---------- keyword
+ ---------- invalid
+[* ---------- invalid
+this ---------- identifier
+is ---------- keyword
+sample ---------- identifier
+*] ---------- invalid
