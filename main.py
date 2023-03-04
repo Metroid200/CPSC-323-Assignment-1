@@ -1,19 +1,23 @@
 import sys
 
 
+# List of operators, unsure if => is a typo so >= is also included
 operators = {'=': 'operator', '+': 'operator', '-': 'operator', '/': 'operator', '==': 'operator',
              '*': 'operator', '<': 'operator', '>': 'operator', '<=': 'operator', '=>': 'operator',
              '>=': 'operator', '!=': 'operator'}
 operators_key = operators.keys()
 
+# List of keywords
 keyword = ['function', 'int', 'bool', 'real', 'if', 'fi', 'else', 'return', 'put', 'get', 'while', 'endwhile',
            'true', 'false']
 
+# List of separators
 separator = {'(' : 'separator', ')' : 'separator', '#': 'separator', ':' : 'separator', ';' : 'separator',
              ');' : 'separator' , ',' : 'separator', '{' : 'separator', '}' : 'separator', '|': 'separator'}
 separator_key = separator.keys()
 
 
+# Ignore comments found in file
 def ignore_comment(str):
     result = ''
     skip = 0
@@ -27,6 +31,7 @@ def ignore_comment(str):
     return result
 
 
+# Identifier FSM
 def id_FSM(id):
     states = {
         'start': [('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 'letter')],
@@ -55,6 +60,7 @@ def id_FSM(id):
     return state
 
 
+# Integer and Real FSM
 def int_real_FSM(num):
     states = {
         'start': [('0123456789', 'integer')],
@@ -84,6 +90,7 @@ def int_real_FSM(num):
     return state
 
 
+# Lexer function
 def lexer(token):
     if token == '':
         return
