@@ -1,0 +1,6 @@
+def square(a):
+    answer = a * a
+    return answer
+
+x = square( 6.0 )
+print(x)

@@ -10,7 +10,7 @@ keyword = ['function', 'int', 'bool', 'real', 'if', 'fi', 'else', 'return', 'put
            'true', 'false']
 
 separator = {'(' : 'separator', ')' : 'separator', '#': 'separator', ':' : 'separator', ';' : 'separator',
-             '.' : 'separator' , ',' : 'separator', '{' : 'separator', '}' : 'separator', '|': 'separator'}
+             ');' : 'separator' , ',' : 'separator', '{' : 'separator', '}' : 'separator', '|': 'separator'}
 separator_key = separator.keys()
 
 

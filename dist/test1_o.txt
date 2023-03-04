@@ -1,0 +1,17 @@
+lexeme ---------- token
+
+def ---------- identifier
+square(a): ---------- invalid
+answer ---------- identifier
+= ---------- operator
+a ---------- identifier
+* ---------- operator
+a ---------- identifier
+return ---------- keyword
+answer ---------- identifier
+x ---------- identifier
+= ---------- operator
+square( ---------- invalid
+6.0 ---------- real
+) ---------- separator
+print(x) ---------- invalid

@@ -1,0 +1,13 @@
+for i in range ( 1 , 6 ) :
+    if i == 3:
+        print('Found it!')
+    continue
+    print ( i )
+
+def factorial ( n ) :
+    if n == 0:
+        return 1
+    else:
+        return n * factorial ( n - 1 )
+
+print (factorial ( 5 ))
