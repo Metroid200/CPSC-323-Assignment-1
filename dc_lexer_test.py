@@ -8,7 +8,7 @@ keyword = ['for','while','False','await','else','if','import','pass','None','bre
 ,'global','not','with','async','elif','or','yield','endwhile','forend','ifend','range','print']
 
 
-punctuation_symbol = { ':' : 'colon', ';' : 'semi-colon', '.' : 'dot' , ',' : 'comma' }
+punctuation_symbol = { ':' : 'separator', ';' : 'separator', '.' : 'separator' , ',' : 'separator' }
 punctuation_symbol_key = punctuation_symbol.keys()
 
 separator = { '(' : 'separator', ')' : 'separator',' ':'space' }
