@@ -1,0 +1,211 @@
+Input:
+Enter the file name: test3.txt
+
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+for i in range(10):
+    print(fib(i))
+    
+if True:
+    print("It's true")
+else:
+    print("It's false")
+    
+num = 5
+while num > 0:
+    print(num)
+    num -= 1
+    
+def multiply(num1, num2):
+    return num1 * num2
+
+result = multiply(5, 10)
+print(result)
+
+my_list = [1, 2, 3, 4, 5]
+
+for i in my_list:
+    if i % 2 == 0:
+        print(i, "is even")
+    else:
+        print(i, "is odd")
+
+x = 10
+y = 5
+z = x % y
+print(z)
+
+
+lexems ---------- token
+
+def ---------- keyword
+fib ---------- identifier
+( ---------- separator
+n ---------- identifier
+) ---------- separator
+: ---------- colon
+
+if ---------- keyword
+n ---------- identifier
+== ---------- operator
+0 ---------- real
+: ---------- colon
+return ---------- keyword
+0 ---------- real
+elif ---------- keyword
+n ---------- identifier
+== ---------- operator
+1 ---------- real
+: ---------- colon
+return ---------- keyword
+1 ---------- real
+else ---------- keyword
+: ---------- colon
+return ---------- identifier
+fib ---------- identifier
+( ---------- separator
+n ---------- identifier
+- ---------- operator
+1 ---------- real
+) ---------- separator
++ ---------- operator
+fib ---------- identifier
+( ---------- separator
+n ---------- identifier
+- ---------- operator
+2 ---------- real
+) ---------- separator
+
+for ---------- keyword
+i ---------- identifier
+in ---------- keyword
+range ---------- identifier
+( ---------- separator
+10 ---------- real
+) ---------- separator
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+fib ---------- identifier
+( ---------- separator
+i ---------- identifier
+) ---------- separator
+) ---------- separator
+
+if ---------- keyword
+True ---------- keyword
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+"It's true" ---------- identifier
+) ---------- separator
+else ---------- keyword
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+"It's false" ---------- identifier
+) ---------- separator
+
+num ---------- identifier
+= ---------- operator
+5 ---------- real
+while ---------- keyword
+num ---------- identifier
+> ---------- operator
+0 ---------- real
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+num ---------- identifier
+) ---------- separator
+num ---------- identifier
+-= ---------- operator
+1 ---------- real
+
+def ---------- keyword
+multiply ---------- identifier
+( ---------- separator
+num1 ---------- identifier
+, ---------- comma
+num2 ---------- identifier
+) ---------- separator
+: ---------- colon
+return ---------- keyword
+num1 ---------- identifier
+* ---------- operator
+num2 ---------- identifier
+
+result ---------- identifier
+= ---------- operator
+multiply ---------- identifier
+( ---------- separator
+5 ---------- real
+, ---------- comma
+10 ---------- real
+) ---------- separator
+print ---------- identifier
+( ---------- separator
+result ---------- identifier
+) ---------- separator
+
+my_list ---------- identifier
+= ---------- operator
+[ ---------- separator
+1 ---------- real
+, ---------- comma
+2 ---------- real
+, ---------- comma
+3 ---------- real
+, ---------- comma
+4 ---------- real
+, ---------- comma
+5 ---------- real
+] ---------- separator
+
+for ---------- keyword
+i ---------- identifier
+in ---------- keyword
+my_list ---------- identifier
+: ---------- colon
+if ---------- keyword
+i ---------- identifier
+% ---------- operator
+2 ---------- real
+== ---------- operator
+0 ---------- real
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+i ---------- identifier
+, ---------- comma
+is even ------ identifier
+) ------------ seprator
+else --------- keyword
+: ---------- colon
+print ---------- identifier
+( ---------- separator
+i ---------- identifier
+, ---------- comma
+is odd------ identifier
+) ------------ seprator
+x ------------ identifier
+= ------------ operator
+5 ------------ real
+y ------------ identifier
+= ------------ operator
+5 ------------ real
+z ------------ identifier
+= ------------  operator
+x ------------ identifier
+% ------------ operator
+y ------------ identifier
+print ----------- identifier
+( --------------- seprator
+z --------------- identifier
+)--------------- seprator
