@@ -1,0 +1,41 @@
+Input:
+Enter the file name: test1.txt
+
+test1.txt:
+def multiply(a, b):
+c = a * b
+return c
+
+x = multiply(6, 3)
+print(x)
+
+Output:
+lexems ---------- token
+
+def ---------- keyword
+multiply ---------- identifier
+( ---------- separator
+a ---------- identifier
+, ---------- comma
+b ---------- identifier
+) ---------- separator
+: ---------- colon
+c ---------- identifier
+= ---------- operator
+a ---------- identifier
+* ---------- operator
+b ---------- identifier
+return ---------- keyword
+c ---------- identifier
+x ---------- identifier
+= ---------- operator
+multiply ---------- identifier
+( ---------- separator
+6 ---------- real
+, ---------- comma
+3 ---------- real
+) ---------- separator
+print ---------- identifier
+( ---------- separator
+x ---------- identifier
+) ---------- separator
