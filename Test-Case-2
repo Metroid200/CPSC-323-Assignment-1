@@ -1,4 +1,6 @@
-Enter the file name: test3.py
+Input:
+Enter the file name: test3.txt
+
 def binary_search(arr, left, right, x):
     if right >= left:
         mid = left + (right - left) // 2
@@ -10,7 +12,7 @@ def binary_search(arr, left, right, x):
             return binary_search(arr, mid + 1, right, x)
     else:
         return -1
-arr = [2, 3, 4, 10, 40]
+arr = [3, 4, 5, 10, 40]
 x = 10
 result = binary_search(arr, 0, len(arr) - 1, x)
 if result != -1:
@@ -102,11 +104,11 @@ return ---------- identifier
 arr ---------- identifier
 = ---------- operator
 [ ---------- separator
-2 ---------- real
-, ---------- comma
 3 ---------- real
 , ---------- comma
 4 ---------- real
+, ---------- comma
+5 ---------- real
 , ---------- comma
 10 ---------- real
 , ---------- comma
