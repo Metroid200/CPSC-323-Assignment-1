@@ -1,0 +1,5 @@
+lexeme ---------- token
+
++= ---------- operator
+() ---------- separator
+#)(# ---------- separator

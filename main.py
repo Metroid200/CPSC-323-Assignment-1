@@ -4,7 +4,7 @@ import sys
 # List of operators, unsure if => is a typo so >= is also included
 operators = {'=': 'operator', '+': 'operator', '-': 'operator', '/': 'operator', '==': 'operator',
              '*': 'operator', '<': 'operator', '>': 'operator', '<=': 'operator', '=>': 'operator',
-             '>=': 'operator', '!=': 'operator'}
+             '>=': 'operator', '!=': 'operator', '+=': 'operator'}
 operators_key = operators.keys()
 
 # List of keywords
@@ -12,8 +12,9 @@ keyword = ['function', 'int', 'bool', 'real', 'if', 'fi', 'else', 'return', 'put
            'true', 'false']
 
 # List of separators
-separator = {'(' : 'separator', ')' : 'separator', '#': 'separator', ':' : 'separator', ';' : 'separator',
-             ');' : 'separator' , ',' : 'separator', '{' : 'separator', '}' : 'separator', '|': 'separator'}
+separator = {'(': 'separator', ')': 'separator', '#': 'separator', ':': 'separator', ';': 'separator',
+             ');': 'separator' , ',': 'separator', '{': 'separator', '}': 'separator', '|': 'separator',
+             '()': 'separator', '#)(#': 'separator'}
 separator_key = separator.keys()
 
 
